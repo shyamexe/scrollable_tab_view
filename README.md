@@ -15,6 +15,78 @@ dependencies:
   scrollable_tab_view: <latest-version>
 ```
 
+## Installation
+
+Import the package in your Dart file:
+
+```yaml
+import 'package:scrollable_tab_view/scrollable_tab_view.dart';
+
+```
+
+## Usage
+
+The ScrollableTab widget allows you to create a tab bar with scrollable tabs without using a controller.
+
+```dart
+ScrollableTab(
+  labelColor: Colors.black,
+  tabs: List.generate(
+      5,
+      (index) => Tab(
+            text: 'index $index',
+          )),
+  children: List.generate(
+      5,
+      (index) => ListTile(
+            title: Center(
+              child: Text(
+                'tab Number $index',
+                style: Theme.of(context)
+                    .textTheme
+                    .labelLarge!
+                    .copyWith(fontSize: 20.0 + (30 * index)),
+              ),
+            ),
+          )),
+),
+
+```
+
+The ScrollableTabBar widget allows you to create a tab bar with scrollable tabs with a controller.
+
+```dart
+Column(
+  children: [
+
+    ScrollableTabBar(
+      labelColor: Colors.black,
+      controller: controller,
+      tabs: List.generate(
+          5,
+          (index) => Tab(
+                text: 'index $index',
+              )),
+    ),
+    ScrollableTabViewWithController(
+      controller: controller,
+      children: List.generate(
+          5,
+          (index) => ListTile(
+                title: Center(
+                  child: Text(
+                    'tab Number $index',
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelLarge!
+                        .copyWith(fontSize: 20.0 + (30 * index)),
+                  ),
+                ),
+              )),
+    )
+  ],
+),
+```
 
 ## Getting Started
 
