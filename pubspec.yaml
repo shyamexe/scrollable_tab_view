@@ -1,7 +1,7 @@
 name: scrollable_tab_view
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/shyamexe/scrollable_tab_view
 
 environment:
   sdk: '>=2.19.5 <3.0.0'
