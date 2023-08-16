@@ -1,42 +1,43 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'package:scrollable_tab_view/src/scrollable_tab_view.dart';
 
 class ScrollableTab extends StatefulWidget {
-  int initialIndex = 0;
-  Duration? animationDuration;
-  bool isScrollable;
-  List<Widget> tabs;
-  void Function(int)? onTap;
-  double? centerGap;
-  List<Widget> children;
-  EdgeInsetsGeometry? padding;
-  Color? indicatorColor;
-  bool? automaticIndicatorColorAdjustment;
-  double? indicatorWeight;
-  EdgeInsetsGeometry? indicatorPadding;
-  Decoration? indicator;
-  TabBarIndicatorSize? indicatorSize;
-  Color? dividerColor;
-  Color? labelColor;
-  TextStyle? labelStyle;
-  EdgeInsetsGeometry? labelPadding;
-  Color? unselectedLabelColor;
-  TextStyle? unselectedLabelStyle;
-  DragStartBehavior? dragStartBehavior;
-  MouseCursor? mouseCursor;
-  bool? enableFeedback;
-  ScrollPhysics? physics;
-  InteractiveInkFeatureFactory? splashFactory;
-  BorderRadius? splashBorderRadius;
-  ScrollableTab({
-    super.key,
+  final int initialIndex;
+  final Duration? animationDuration;
+  final bool isScrollable;
+  final List<Widget> tabs;
+  final void Function(int)? onTap;
+  final double? centerGap;
+  final List<Widget> children;
+  final EdgeInsetsGeometry? padding;
+  final Color? indicatorColor;
+  final bool? automaticIndicatorColorAdjustment;
+  final double? indicatorWeight;
+  final EdgeInsetsGeometry? indicatorPadding;
+  final Decoration? indicator;
+  final TabBarIndicatorSize? indicatorSize;
+  final Color? dividerColor;
+  final Color? labelColor;
+  final TextStyle? labelStyle;
+  final EdgeInsetsGeometry? labelPadding;
+  final Color? unselectedLabelColor;
+  final TextStyle? unselectedLabelStyle;
+  final DragStartBehavior? dragStartBehavior;
+  final MouseCursor? mouseCursor;
+  final bool? enableFeedback;
+  final ScrollPhysics? physics;
+  final InteractiveInkFeatureFactory? splashFactory;
+  final BorderRadius? splashBorderRadius;
+ const ScrollableTab({
+    Key? key,
     this.initialIndex = 0,
-    this.isScrollable = false,
     this.animationDuration,
-    this.centerGap = 0,
-    this.onTap,
+    this.isScrollable = false,
     required this.tabs,
+    this.onTap,
+    this.centerGap = 0,
     required this.children,
     this.padding,
     this.indicatorColor,
@@ -57,7 +58,7 @@ class ScrollableTab extends StatefulWidget {
     this.physics,
     this.splashFactory,
     this.splashBorderRadius,
-  });
+  }) : super(key: key);
 
   @override
   State<ScrollableTab> createState() => _ScrollableTabState();

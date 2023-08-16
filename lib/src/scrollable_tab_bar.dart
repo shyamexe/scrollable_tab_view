@@ -2,31 +2,31 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ScrollableTabBar extends StatelessWidget {
-  late List<Widget> tabs;
-  TabController? controller;
-  bool? isScrollable;
-  EdgeInsetsGeometry? padding;
-  Color? indicatorColor;
-  bool? automaticIndicatorColorAdjustment;
-  double? indicatorWeight;
-  EdgeInsetsGeometry? indicatorPadding;
-  Decoration? indicator;
-  TabBarIndicatorSize? indicatorSize;
-  Color? dividerColor;
-  Color? labelColor;
-  TextStyle? labelStyle;
-  EdgeInsetsGeometry? labelPadding;
-  Color? unselectedLabelColor;
-  TextStyle? unselectedLabelStyle;
-  DragStartBehavior? dragStartBehavior;
-  MouseCursor? mouseCursor;
-  bool? enableFeedback;
-  void Function(int)? onTap;
-  ScrollPhysics? physics;
-  InteractiveInkFeatureFactory? splashFactory;
-  BorderRadius? splashBorderRadius;
+  final List<Widget> tabs;
+  final TabController? controller;
+  final bool? isScrollable;
+  final EdgeInsetsGeometry? padding;
+  final Color? indicatorColor;
+  final bool? automaticIndicatorColorAdjustment;
+  final double? indicatorWeight;
+  final EdgeInsetsGeometry? indicatorPadding;
+  final Decoration? indicator;
+  final TabBarIndicatorSize? indicatorSize;
+  final Color? dividerColor;
+  final Color? labelColor;
+  final TextStyle? labelStyle;
+  final EdgeInsetsGeometry? labelPadding;
+  final Color? unselectedLabelColor;
+  final TextStyle? unselectedLabelStyle;
+  final DragStartBehavior? dragStartBehavior;
+  final MouseCursor? mouseCursor;
+  final bool? enableFeedback;
+  final void Function(int)? onTap;
+  final ScrollPhysics? physics;
+  final InteractiveInkFeatureFactory? splashFactory;
+  final BorderRadius? splashBorderRadius;
 
-  ScrollableTabBar({
+  const ScrollableTabBar({
     Key? key,
     required this.tabs,
     this.controller,

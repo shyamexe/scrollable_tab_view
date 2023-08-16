@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'scrollable_tab_view.dart';
 
 class ScrollableTabViewWithController extends StatefulWidget {
-  late TabController controller;
-  List<Widget> children;
-  ScrollableTabViewWithController({
+  final TabController controller;
+  final List<Widget> children;
+  const ScrollableTabViewWithController({
     Key? key,
     required this.controller,
     required this.children,

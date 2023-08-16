@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ScrollableTabView extends StatelessWidget {
-   List<Widget> children;
-   int selectedIndex;
-   ScrollableTabView({
+   final List<Widget> children;
+   final int selectedIndex;
+   const ScrollableTabView({
     Key? key,
     required this.children,
     required this.selectedIndex,
