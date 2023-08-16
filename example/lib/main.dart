@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                         )),
               ),
               const TitleWidget(
-                title: 'ScrollableTab widget',
+                title: 'ScrollableTabBar',
               ),
               ScrollableTabBar(
                 labelColor: Colors.black,
