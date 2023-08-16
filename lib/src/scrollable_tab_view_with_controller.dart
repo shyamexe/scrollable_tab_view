@@ -4,9 +4,11 @@ import 'scrollable_tab_view.dart';
 class ScrollableTabViewWithController extends StatefulWidget {
   late TabController controller;
   List<Widget> children;
-  ScrollableTabViewWithController(
-      {Key? key, required this.controller, required this.children})
-      : super(key: key);
+  ScrollableTabViewWithController({
+    Key? key,
+    required this.controller,
+    required this.children,
+  }) : super(key: key);
 
   @override
   State<ScrollableTabViewWithController> createState() =>
@@ -20,9 +22,7 @@ class _ScrollableTabViewWithControllerState
   void initState() {
     widget.controller.addListener(() {
       index = widget.controller.index;
-      setState(() {
-        
-      });
+      setState(() {});
     });
 
     super.initState();
