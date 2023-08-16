@@ -53,7 +53,7 @@ ScrollableTab(
 
 ```
 
-The ScrollableTabBar widget allows you to create a tab bar with scrollable tabs with a controller.
+The ScrollableTabBar and ScrollableTabViewWithController widgets allow you to create a tab bar with scrollable tabs using a TabController.
 
 ```dart
 Column(
