@@ -12,7 +12,7 @@ void main() {
           const MaterialApp(home: ScrollableTabWidget()),
         );
 
-        final text = find.text('index 0');
+        final text = find.text('tab Number 0');
         expect(text, findsOneWidget);
       },
     );
@@ -27,7 +27,7 @@ void main() {
         await tester.tap(tab1);
         await tester.pump();
 
-        final text = find.text('index 1');
+        final text = find.text('tab Number 1');
         expect(text, findsOneWidget);
       },
     );
@@ -41,7 +41,7 @@ void main() {
           const MaterialApp(home: ScrollableTabViewWithControllerWidget()),
         );
 
-        final text = find.text('index 0');
+        final text = find.text('tab Number 0');
         expect(text, findsOneWidget);
       },
     );
@@ -56,7 +56,7 @@ void main() {
         await tester.tap(tab1);
         await tester.pump();
 
-        final text = find.text('index 1');
+        final text = find.text('tab Number 1');
         expect(text, findsOneWidget);
       },
     );
