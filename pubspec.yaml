@@ -4,7 +4,7 @@ version: 0.0.3
 homepage: https://github.com/shyamexe/scrollable_tab_view
 
 environment:
-  sdk: '>=2.19.5 <3.0.0'
+  sdk: '>=2.19.5 <4.0.0'
   flutter: ">=2.5.0"
 
 dependencies:
