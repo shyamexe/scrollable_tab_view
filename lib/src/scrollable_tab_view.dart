@@ -11,10 +11,11 @@ class ScrollableTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Wrap the children widgets in an AnimatedContainer to enable smooth transitions.
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 600),
-      width: double.infinity,
-      child: children[selectedIndex],
+      duration: const Duration(milliseconds: 600),// Duration for the animation.
+      width: double.infinity,// Set the width of the container to fill available space.
+      child: children[selectedIndex],// Show the selected child widget based on the selectedIndex.
     );
   }
 }

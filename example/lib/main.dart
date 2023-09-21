@@ -17,11 +17,14 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   late TabController controller;
   @override
   void initState() {
+    // Initialize the TabController with a length of 5 and a vsync provided by this class
     controller = TabController(length: 5, vsync: this);
     super.initState();
   }
+
   @override
   void dispose() {
+    // Dispose the TabController when the state is disposed to free up resources
     controller.dispose();
     super.dispose();
   }
@@ -36,9 +39,11 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              // TitleWidget widget that displays a centered title
               const TitleWidget(
                 title: 'ScrollableTab widget',
               ),
+              // ScrollableTab widget that displays horizontal tabs and their content
               ScrollableTab(
                 labelColor: Colors.black,
                 tabs: List.generate(
@@ -60,9 +65,11 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                           ),
                         )),
               ),
+              // TitleWidget widget that displays a centered title
               const TitleWidget(
                 title: 'ScrollableTabBar',
               ),
+              // ScrollableTabBar widget that displays the tabs only without the content
               ScrollableTabBar(
                 labelColor: Colors.black,
                 controller: controller,
@@ -72,6 +79,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                           text: 'index $index',
                         )),
               ),
+              // ScrollableTabViewWithController widget that displays the tab content with a shared TabController
               ScrollableTabViewWithController(
                 controller: controller,
                 children: List.generate(
@@ -96,6 +104,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   }
 }
 
+// TitleWidget widget that displays a centered title
 class TitleWidget extends StatelessWidget {
   final String title;
   const TitleWidget({

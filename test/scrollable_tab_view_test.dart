@@ -4,7 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'test_config.dart';
 
 void main() {
+  // Testing group for ScrollableTab widget
   group('ScrollableTab widget testing', () {
+    // Test case for initial state
     testWidgets(
       'initial state tests',
       (WidgetTester tester) async {
@@ -16,6 +18,7 @@ void main() {
         expect(text, findsOneWidget);
       },
     );
+    // Test case for tapping the second tab
     testWidgets(
       '2nd tab tap tests',
       (WidgetTester tester) async {
@@ -33,7 +36,9 @@ void main() {
     );
   });
 
+// Testing group for ScrollableTabViewWithController widget
   group('ScrollableTabViewWithController widget testing', () {
+     // Test case for initial state
     testWidgets(
       'initial state tests',
       (WidgetTester tester) async {
@@ -45,6 +50,7 @@ void main() {
         expect(text, findsOneWidget);
       },
     );
+    // Test case for tapping the second tab
     testWidgets(
       '2nd tab tap tests',
       (WidgetTester tester) async {

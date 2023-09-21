@@ -62,6 +62,7 @@ class _ScrollableTabViewWithControllerWidgetState
     return Scaffold(
         body: Column(
       children: [
+        // ScrollableTabBar widget that displays the tabs
         ScrollableTabBar(
           labelColor: Colors.black,
           controller: controller,
@@ -71,6 +72,7 @@ class _ScrollableTabViewWithControllerWidgetState
                     text: 'index $index',
                   )),
         ),
+        // ScrollableTabViewWithController widget that displays the tab content
         ScrollableTabViewWithController(
           controller: controller,
           children: List.generate(
