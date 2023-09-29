@@ -83,7 +83,7 @@ class _ScrollableTabState extends State<ScrollableTab> {
               isScrollable: widget.isScrollable,// Allow scrolling if isScrollable is true.
               
               onTap: (value) {
-                widget.onTap;// Call the provided onTap function.
+                widget.onTap?.call(value);// Call the provided Function(int)? onTap function.
                 selectedIndex = value;// Update the selectedIndex with the tapped tab index.
                 setState(() {});// Trigger a rebuild to reflect the new selectedIndex.
               },

@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:scrollable_tab_view/scrollable_tab_view.dart';
 
@@ -46,6 +47,11 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
               // ScrollableTab widget that displays horizontal tabs and their content
               ScrollableTab(
                 labelColor: Colors.black,
+                onTap: (value) {
+                  if (kDebugMode) {
+                    print(value);
+                  }
+                },
                 tabs: List.generate(
                     5,
                     (index) => Tab(
