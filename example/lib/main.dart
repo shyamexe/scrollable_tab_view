@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                 labelColor: Colors.black,
                 onTap: (value) {
                   if (kDebugMode) {
-                    print(value);
+                    print('index $value');
                   }
                 },
                 tabs: List.generate(
