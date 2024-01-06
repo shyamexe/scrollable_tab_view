@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'scrollable_tab_view.dart';
 
+/// Create a ScrollableTabView widget and pass the selected [ index ] and [ child ] widgets.
 class ScrollableTabViewWithController extends StatefulWidget {
+  
   final TabController controller;
   final List<Widget> children;
   const ScrollableTabViewWithController({
@@ -17,7 +19,7 @@ class ScrollableTabViewWithController extends StatefulWidget {
 
 class _ScrollableTabViewWithControllerState
     extends State<ScrollableTabViewWithController> {
-  // This variable holds the current index of the selected tab.
+  /// This variable holds the current index of the selected tab.
   int index = 0;
   @override
   void initState() {
@@ -34,7 +36,7 @@ class _ScrollableTabViewWithControllerState
 
   @override
   Widget build(BuildContext context) {
-    // Create a ScrollableTabView widget and pass the selected index and child widgets.
+    
     return ScrollableTabView(
       selectedIndex: index,
       children: widget.children,

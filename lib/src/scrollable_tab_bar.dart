@@ -1,34 +1,65 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-
-// This class represents a scrollable tab bar widget.
+/// [ ScrollableTabBar ] represents a scrollable tab bar widget.
+///
+/// [tabs] The list of tabs to display in the tab bar
+/// [controller]  The controller for the tab bar
+/// [isScrollable]  Whether the tab bar should be scrollable
+/// [padding]  The padding around the tab bar
+/// [indicatorColor]  The color of the selected tab indicator
+/// [automaticIndicatorColorAdjustment]  Whether the indicator color should be automatically adjusted based on the tab label's color
+/// [indicatorWeight]  The weight (thickness) of the selected tab indicator
+/// [indicatorPadding]  The padding around the selected tab indicator
+/// [indicator]  The decoration for the selected tab indicator
+/// [indicatorSize]  The size of the selected tab indicator
+/// [dividerColor]  The color of the dividers between tabs
+/// [labelColor]  The color of the selected tab label
+/// [labelStyle]  The style of the selected tab label
+/// [labelPadding]  The padding around the selected tab label
+/// [unselectedLabelColor]  The color of the unselected tab labels
+/// [unselectedLabelStyle]  The style of the unselected tab labels
+/// [dragStartBehavior]  The drag start behavior for the tab bar
+/// [mouseCursor]  The mouse cursor for the tab bar
+/// [enableFeedback]  Whether feedback should be enabled for the tab bar
+/// [onTap]  The callback function when a tab is tapped
+/// [physics]  The scroll physics for the tab bar
+/// [splashFactory]  The factory for creating ink splashes when a tab is tapped
+/// [splashBorderRadius]  The border radius for the ink splashes
 class ScrollableTabBar extends StatelessWidget {
-  final List<Widget> tabs; // The list of tabs to display in the tab bar
-  final TabController? controller; // The controller for the tab bar
-  final bool? isScrollable; // Whether the tab bar should be scrollable
-  final EdgeInsetsGeometry? padding; // The padding around the tab bar
-  final Color? indicatorColor; // The color of the selected tab indicator
-  final bool? automaticIndicatorColorAdjustment; // Whether the indicator color should be automatically adjusted based on the tab label's color 
-  final double? indicatorWeight; // The weight (thickness) of the selected tab indicator
-  final EdgeInsetsGeometry? indicatorPadding; // The padding around the selected tab indicator
-  final Decoration? indicator; // The decoration for the selected tab indicator
-  final TabBarIndicatorSize? indicatorSize; // The size of the selected tab indicator
-  final Color? dividerColor; // The color of the dividers between tabs
-  final Color? labelColor; // The color of the selected tab label
-  final TextStyle? labelStyle; // The style of the selected tab label
-  final EdgeInsetsGeometry? labelPadding; // The padding around the selected tab label
-  final Color? unselectedLabelColor; // The color of the unselected tab labels
-  final TextStyle? unselectedLabelStyle; // The style of the unselected tab labels
-  final DragStartBehavior? dragStartBehavior; // The drag start behavior for the tab bar
-  final MouseCursor? mouseCursor; // The mouse cursor for the tab bar
-  final bool? enableFeedback; // Whether feedback should be enabled for the tab bar
-  final void Function(int)? onTap; // The callback function when a tab is tapped
-  final ScrollPhysics? physics; // The scroll physics for the tab bar
-  final InteractiveInkFeatureFactory? splashFactory; // The factory for creating ink splashes when a tab is tapped
-  final BorderRadius? splashBorderRadius; // The border radius for the ink splashes
-
-
+  final List<Widget> tabs; 
+  final TabController? controller;
+  final bool? isScrollable;
+  final EdgeInsetsGeometry? padding; 
+  final Color? indicatorColor; 
+  final bool?
+      automaticIndicatorColorAdjustment; 
+  final double?
+      indicatorWeight; 
+  final EdgeInsetsGeometry?
+      indicatorPadding;
+  final Decoration? indicator; 
+  final TabBarIndicatorSize?
+      indicatorSize;
+  final Color? dividerColor; 
+  final Color? labelColor; 
+  final TextStyle? labelStyle; 
+  final EdgeInsetsGeometry?
+      labelPadding; 
+  final Color? unselectedLabelColor; 
+  final TextStyle?
+      unselectedLabelStyle;
+  final DragStartBehavior?
+      dragStartBehavior; 
+  final MouseCursor? mouseCursor; 
+  final bool?
+      enableFeedback;
+  final void Function(int)? onTap; 
+  final ScrollPhysics? physics; 
+  final InteractiveInkFeatureFactory?
+      splashFactory;
+  final BorderRadius?
+      splashBorderRadius;
   const ScrollableTabBar({
     Key? key,
     required this.tabs,
