@@ -6,58 +6,58 @@ import 'package:scrollable_tab_view/src/scrollable_tab_view.dart';
 /// Set up the DefaultTabController to handle tab navigation.
 ///
 ///
-/// int [ initialIndex ] Set the initial selected tab index.  
-///        
-/// Duration? [animationDuration]  Duration for tab transition animation.   
-///        
-/// bool [isScrollable] Allow scrolling if isScrollable is true.  
-///        
-/// List<Widget> [tabs] Provide the list of widgets as tabs.  
-///        
-/// void Function(int)? [onTap]  Call the provided Function(int)? onTap function.   
-///        
-/// double? [centerGap] Provide additional vertical space between TabBar and ScrollableTabView.   
-///        
-/// List<Widget> [children]  Pass the list of child widgets to the ScrollableTabView.   
-///        
-/// EdgeInsetsGeometry? [padding]  Padding around the entire TabBar widget.   
-///        
-/// Color? [indicatorColor] Color of the selected tab indicator.  
-///        
-/// bool? [automaticIndicatorColorAdjustment]  Adjust indicator color automatically.  
-///        
-/// double? [indicatorWeight] Thickness of the selected tab indicator.  
-///        
-/// EdgeInsetsGeometry? [indicatorPadding] Padding around the indicator.  
-///        
-/// Decoration? [indicator] Custom indicator widget.  
-///        
-/// TabBarIndicatorSize? [indicatorSize] Size of the selected tab indicator.  
-///        
-/// Color? [dividerColor] Color of dividers between tabs.   
-///        
-/// Color? [labelColor] Color of the selected tab label.  
-///        
-/// TextStyle? [labelStyle] Style for the selected tab label.   
-///        
-/// EdgeInsetsGeometry? [labelPadding]  Padding around the selected tab label.  
-///        
-/// Color? [unselectedLabelColor] Color of the unselected tab label.  
-///        
-/// TextStyle? [unselectedLabelStyle] Style for unselected tab labels.  
-///        
-/// DragStartBehavior? [dragStartBehavior]  Behavior of dragging gestures.  
-///        
-/// MouseCursor? [mouseCursor]  Cursor type on hover.   
-///        
-/// bool? [enableFeedback] Enable haptic feedback.  
-///        
-/// ScrollPhysics? [physics] Scroll physics for the tabs.   
-///        
-/// InteractiveInkFeatureFactory? [splashFactory]  Factory for ink splash effects.  
-///        
-/// BorderRadius? [splashBorderRadius] Border radius for ink splash effect.   
-///        
+/// int [ initialIndex ] Set the initial selected tab index.
+///
+/// Duration? [animationDuration]  Duration for tab transition animation.
+///
+/// bool [isScrollable] Allow scrolling if isScrollable is true.
+///
+/// List<Widget> [tabs] Provide the list of widgets as tabs.
+///
+/// void Function(int)? [onTap]  Call the provided Function(int)? onTap function.
+///
+/// double? [centerGap] Provide additional vertical space between TabBar and ScrollableTabView.
+///
+/// List<Widget> [children]  Pass the list of child widgets to the ScrollableTabView.
+///
+/// EdgeInsetsGeometry? [padding]  Padding around the entire TabBar widget.
+///
+/// Color? [indicatorColor] Color of the selected tab indicator.
+///
+/// bool? [automaticIndicatorColorAdjustment]  Adjust indicator color automatically.
+///
+/// double? [indicatorWeight] Thickness of the selected tab indicator.
+///
+/// EdgeInsetsGeometry? [indicatorPadding] Padding around the indicator.
+///
+/// Decoration? [indicator] Custom indicator widget.
+///
+/// TabBarIndicatorSize? [indicatorSize] Size of the selected tab indicator.
+///
+/// Color? [dividerColor] Color of dividers between tabs.
+///
+/// Color? [labelColor] Color of the selected tab label.
+///
+/// TextStyle? [labelStyle] Style for the selected tab label.
+///
+/// EdgeInsetsGeometry? [labelPadding]  Padding around the selected tab label.
+///
+/// Color? [unselectedLabelColor] Color of the unselected tab label.
+///
+/// TextStyle? [unselectedLabelStyle] Style for unselected tab labels.
+///
+/// DragStartBehavior? [dragStartBehavior]  Behavior of dragging gestures.
+///
+/// MouseCursor? [mouseCursor]  Cursor type on hover.
+///
+/// bool? [enableFeedback] Enable haptic feedback.
+///
+/// ScrollPhysics? [physics] Scroll physics for the tabs.
+///
+/// InteractiveInkFeatureFactory? [splashFactory]  Factory for ink splash effects.
+///
+/// BorderRadius? [splashBorderRadius] Border radius for ink splash effect.
+///
 class ScrollableTab extends StatefulWidget {
   final int initialIndex;
   final Duration? animationDuration;
