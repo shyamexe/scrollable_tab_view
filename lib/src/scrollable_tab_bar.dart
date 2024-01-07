@@ -27,39 +27,29 @@ import 'package:flutter/material.dart';
 /// [splashFactory]  The factory for creating ink splashes when a tab is tapped
 /// [splashBorderRadius]  The border radius for the ink splashes
 class ScrollableTabBar extends StatelessWidget {
-  final List<Widget> tabs; 
+  final List<Widget> tabs;
   final TabController? controller;
   final bool? isScrollable;
-  final EdgeInsetsGeometry? padding; 
-  final Color? indicatorColor; 
-  final bool?
-      automaticIndicatorColorAdjustment; 
-  final double?
-      indicatorWeight; 
-  final EdgeInsetsGeometry?
-      indicatorPadding;
-  final Decoration? indicator; 
-  final TabBarIndicatorSize?
-      indicatorSize;
-  final Color? dividerColor; 
-  final Color? labelColor; 
-  final TextStyle? labelStyle; 
-  final EdgeInsetsGeometry?
-      labelPadding; 
-  final Color? unselectedLabelColor; 
-  final TextStyle?
-      unselectedLabelStyle;
-  final DragStartBehavior?
-      dragStartBehavior; 
-  final MouseCursor? mouseCursor; 
-  final bool?
-      enableFeedback;
-  final void Function(int)? onTap; 
-  final ScrollPhysics? physics; 
-  final InteractiveInkFeatureFactory?
-      splashFactory;
-  final BorderRadius?
-      splashBorderRadius;
+  final EdgeInsetsGeometry? padding;
+  final Color? indicatorColor;
+  final bool? automaticIndicatorColorAdjustment;
+  final double? indicatorWeight;
+  final EdgeInsetsGeometry? indicatorPadding;
+  final Decoration? indicator;
+  final TabBarIndicatorSize? indicatorSize;
+  final Color? dividerColor;
+  final Color? labelColor;
+  final TextStyle? labelStyle;
+  final EdgeInsetsGeometry? labelPadding;
+  final Color? unselectedLabelColor;
+  final TextStyle? unselectedLabelStyle;
+  final DragStartBehavior? dragStartBehavior;
+  final MouseCursor? mouseCursor;
+  final bool? enableFeedback;
+  final void Function(int)? onTap;
+  final ScrollPhysics? physics;
+  final InteractiveInkFeatureFactory? splashFactory;
+  final BorderRadius? splashBorderRadius;
   const ScrollableTabBar({
     Key? key,
     required this.tabs,

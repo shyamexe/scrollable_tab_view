@@ -1,0 +1,22 @@
+PODS:
+  - FlutterMacOS (1.0.0)
+  - scrollable_tab_view (0.0.1):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - scrollable_tab_view (from `Flutter/ephemeral/.symlinks/plugins/scrollable_tab_view/macos`)
+
+EXTERNAL SOURCES:
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  scrollable_tab_view:
+    :path: Flutter/ephemeral/.symlinks/plugins/scrollable_tab_view/macos
+
+SPEC CHECKSUMS:
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  scrollable_tab_view: ffd9270ce3c949aa1d4fab1fa248b65648a2a42c
+
+PODFILE CHECKSUM: 236401fc2c932af29a9fcf0e97baeeb2d750d367
+
+COCOAPODS: 1.13.0
