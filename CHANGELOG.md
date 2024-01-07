@@ -1,16 +1,18 @@
-# Version 0.0.5 - Web Platform and Desktop Support
+# Version 0.0.6 - Dart Formatting Update
 
-## Key Features
+## No Functional Changes
 
-- **Web Support:**
-    - Improved compatibility with web browsers.
-    
-- **Desktop Support:**
-    - Enabled usage of the ScrollableTab widget on macOS, Windows, and Linux operating systems.
+This release includes formatting updates to ensure consistent and proper Dart formatting across the codebase.
 
 ## Previous Versions
 
-**Version 0.0.4 - Bug Fix**
+**Web Platform and Desktop Support (Version 0.0.5)**
+
+* Improved compatibility with web browsers.
+    
+* Enabled usage of the ScrollableTab widget on macOS, Windows, and Linux operating systems.
+
+**Bug Fix (Version 0.0.4 )**
 
 * Fixed a problem with the function invocation that was causing issues with the onTap functionality.
 
