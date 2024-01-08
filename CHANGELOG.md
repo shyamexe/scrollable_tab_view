@@ -1,4 +1,4 @@
-# Version 0.0.6 - Dart Formatting Update
+# Version 1.0.2 - Dart Formatting Update
 
 ## No Functional Changes
 

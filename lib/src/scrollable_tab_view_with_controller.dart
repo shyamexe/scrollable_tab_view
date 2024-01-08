@@ -3,7 +3,6 @@ import 'scrollable_tab_view.dart';
 
 /// Create a ScrollableTabView widget and pass the selected [ index ] and [ child ] widgets.
 class ScrollableTabViewWithController extends StatefulWidget {
-  
   final TabController controller;
   final List<Widget> children;
   const ScrollableTabViewWithController({
@@ -36,7 +35,6 @@ class _ScrollableTabViewWithControllerState
 
   @override
   Widget build(BuildContext context) {
-    
     return ScrollableTabView(
       selectedIndex: index,
       children: widget.children,
