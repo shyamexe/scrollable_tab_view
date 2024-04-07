@@ -1,4 +1,4 @@
-# Version 1.0.4 - Custom Tab Background Colors
+# Version 1.0.5 - Custom Tab Background Colors
 
 ## New Feature
 
