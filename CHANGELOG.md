@@ -1,10 +1,16 @@
-# Version 1.0.2 - Dart Formatting Update
+# Version 1.0.3 - Custom Tab Background Colors
 
-## No Functional Changes
+## New Feature
 
-This release includes formatting updates to ensure consistent and proper Dart formatting across the codebase.
+Added the ability to customize the background color of the tab bar and tab view independently, providing greater flexibility in UI customization.
 
 ## Previous Versions
+
+
+**Dart Formatting Update (Version 1.0.2)**
+
+* This release includes formatting updates to ensure consistent and proper Dart formatting across the codebase.
+
 
 **Web Platform and Desktop Support (Version 0.0.5)**
 
