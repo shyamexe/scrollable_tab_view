@@ -59,8 +59,21 @@ import 'package:scrollable_tab_view/src/scrollable_tab_view.dart';
 /// BorderRadius? [splashBorderRadius] Border radius for ink splash effect.
 ///
 /// BoxDecoration [tabBarDecoration] Decoration for the TabBar
-/// 
+///
 /// BoxDecoration [tabViewDecoration] Decoration for the TaView
+///
+/// Duration [animationDuration] Animation duration
+///
+/// bool [automaticIndicatorColorAdjustment] Automatic indicator color
+///
+/// bool [centerGap] Center gap
+///
+/// Widgets [children] Children
+///
+/// bool [useMaxWidth] Use max width
+///
+/// AlignmentGeometry [tabAlignment] Tab alignment
+///
 class ScrollableTab extends StatefulWidget {
   final int initialIndex;
   final Duration? animationDuration;
@@ -90,8 +103,12 @@ class ScrollableTab extends StatefulWidget {
   final BorderRadius? splashBorderRadius;
   final Decoration tabBarDecoration;
   final Decoration tabViewDecoration;
+  final bool useMaxWidth;
+  final AlignmentGeometry tabAlignment;
   const ScrollableTab({
     Key? key,
+    this.useMaxWidth = true,
+    this.tabAlignment = Alignment.centerLeft,
     this.initialIndex = 0,
     this.animationDuration,
     this.isScrollable = false,
@@ -118,8 +135,8 @@ class ScrollableTab extends StatefulWidget {
     this.physics,
     this.splashFactory,
     this.splashBorderRadius,
-    this.tabBarDecoration =const BoxDecoration(),
-    this.tabViewDecoration =const BoxDecoration(),
+    this.tabBarDecoration = const BoxDecoration(),
+    this.tabViewDecoration = const BoxDecoration(),
   }) : super(key: key);
 
   @override
@@ -142,55 +159,61 @@ class _ScrollableTabState extends State<ScrollableTab> {
             .infinity, // Set the width of the container to fill available space.
         child: Column(
           children: [
-            DecoratedBox(
-              decoration:widget.tabBarDecoration,
-              child: TabBar(
-                tabs: widget.tabs, // Provide the list of widgets as tabs.
-                isScrollable: widget
-                    .isScrollable, // Allow scrolling if isScrollable is true.
-              
-                onTap: (value) {
-                  widget.onTap?.call(
-                      value); // Call the provided Function(int)? onTap function.
-                  selectedIndex =
-                      value; // Update the selectedIndex with the tapped tab index.
-                  setState(
-                      () {}); // Trigger a rebuild to reflect the new selectedIndex.
-                },
-                automaticIndicatorColorAdjustment:
-                    widget.automaticIndicatorColorAdjustment ??
-                        true, // Adjust indicator color automatically.
-                dividerColor:
-                    widget.dividerColor, // Color of dividers between tabs.
-                dragStartBehavior: widget.dragStartBehavior ??
-                    DragStartBehavior.start, // Behavior of dragging gestures.
-                enableFeedback: widget.enableFeedback, // Enable haptic feedback.
-                indicator: widget.indicator, // Custom indicator widget.
-                indicatorColor:
-                    widget.indicatorColor, // Color of the selected tab indicator.
-                indicatorPadding: widget.indicatorPadding ??
-                    EdgeInsets.zero, // Padding around the indicator.
-                indicatorSize:
-                    widget.indicatorSize, // Size of the selected tab indicator.
-                indicatorWeight: widget.indicatorWeight ??
-                    2, // Thickness of the selected tab indicator.
-                labelColor: widget.labelColor, // Color of the selected tab label.
-                labelPadding:
-                    widget.labelPadding, // Padding around the selected tab label.
-                labelStyle:
-                    widget.labelStyle, // Style for the selected tab label.
-                mouseCursor: widget.mouseCursor, // Cursor type on hover.
-                padding:
-                    widget.padding, // Padding around the entire TabBar widget.
-                physics: widget.physics, // Scroll physics for the tabs.
-                splashBorderRadius: widget
-                    .splashBorderRadius, // Border radius for ink splash effect.
-                splashFactory:
-                    widget.splashFactory, // Factory for ink splash effects.
-                unselectedLabelColor: widget
-                    .unselectedLabelColor, // Color of unselected tab labels.
-                unselectedLabelStyle: widget
-                    .unselectedLabelStyle, // Style for unselected tab labels.
+            Container(
+              width: double.infinity,
+              decoration: widget.tabBarDecoration,
+              child: Align(
+                alignment: widget.tabAlignment,
+                child: TabBar(
+                  tabs: widget.tabs, // Provide the list of widgets as tabs.
+                  isScrollable: widget
+                      .isScrollable, // Allow scrolling if isScrollable is true.
+
+                  onTap: (value) {
+                    widget.onTap?.call(
+                        value); // Call the provided Function(int)? onTap function.
+                    selectedIndex =
+                        value; // Update the selectedIndex with the tapped tab index.
+                    setState(
+                        () {}); // Trigger a rebuild to reflect the new selectedIndex.
+                  },
+                  automaticIndicatorColorAdjustment:
+                      widget.automaticIndicatorColorAdjustment ??
+                          true, // Adjust indicator color automatically.
+                  dividerColor:
+                      widget.dividerColor, // Color of dividers between tabs.
+                  dragStartBehavior: widget.dragStartBehavior ??
+                      DragStartBehavior.start, // Behavior of dragging gestures.
+                  enableFeedback:
+                      widget.enableFeedback, // Enable haptic feedback.
+                  indicator: widget.indicator, // Custom indicator widget.
+                  indicatorColor: widget
+                      .indicatorColor, // Color of the selected tab indicator.
+                  indicatorPadding: widget.indicatorPadding ??
+                      EdgeInsets.zero, // Padding around the indicator.
+                  indicatorSize: widget
+                      .indicatorSize, // Size of the selected tab indicator.
+                  indicatorWeight: widget.indicatorWeight ??
+                      2, // Thickness of the selected tab indicator.
+                  labelColor:
+                      widget.labelColor, // Color of the selected tab label.
+                  labelPadding: widget
+                      .labelPadding, // Padding around the selected tab label.
+                  labelStyle:
+                      widget.labelStyle, // Style for the selected tab label.
+                  mouseCursor: widget.mouseCursor, // Cursor type on hover.
+                  padding: widget
+                      .padding, // Padding around the entire TabBar widget.
+                  physics: widget.physics, // Scroll physics for the tabs.
+                  splashBorderRadius: widget
+                      .splashBorderRadius, // Border radius for ink splash effect.
+                  splashFactory:
+                      widget.splashFactory, // Factory for ink splash effects.
+                  unselectedLabelColor: widget
+                      .unselectedLabelColor, // Color of unselected tab labels.
+                  unselectedLabelStyle: widget
+                      .unselectedLabelStyle, // Style for unselected tab labels.
+                ),
               ),
             ),
             SizedBox(
@@ -198,7 +221,7 @@ class _ScrollableTabState extends State<ScrollableTab> {
                   .centerGap, // Provide additional vertical space between TabBar and ScrollableTabView.
             ),
             DecoratedBox(
-             decoration: widget.tabViewDecoration,
+              decoration: widget.tabViewDecoration,
               child: ScrollableTabView(
                 selectedIndex:
                     selectedIndex, // Pass the selectedIndex to the ScrollableTabView.
