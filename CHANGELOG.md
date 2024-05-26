@@ -1,10 +1,15 @@
-# Version 1.0.5 - Custom Tab Background Colors
+# Version 1.0.6 - Added TabBar Alignment
 
 ## New Feature
 
-Added the ability to customize the background color of the tab bar and tab view independently, providing greater flexibility in UI customization.
+Added the ability to customize the Alignment of the tab bar and tab view independently, providing greater flexibility in UI customization.
 
 ## Previous Versions
+
+**Custom Tab Background Colors (Version 1.0.5)**
+
+* Added the ability to customize the background color of the tab bar and tab view independently, providing greater flexibility in UI customization.
+
 
 
 **Dart Formatting Update (Version 1.0.2)**
