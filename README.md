@@ -106,7 +106,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://shyamjith.in"><img src="https://avatars.githubusercontent.com/u/93277108?v=4?s=100" width="100px;" alt="Shyamjith"/><br /><sub><b>Shyamjith</b></sub></a><br /><a href="https://github.com/shyamexe/scrollable_tab_view/commits?author=shyamexe" title="Code">💻</a> <a href="https://github.com/shyamexe/scrollable_tab_view/commits?author=shyamexe" title="Documentation">📖</a> <a href="#projectManagement-shyamexe" title="Project Management">📆</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://shyamjith.in"><img src="https://avatars.githubusercontent.com/u/93277108?v=4?s=100" width="100px;" alt="Shyamjith"/><br /><sub><b>Shyamjith</b></sub></a><br /><a href="https://github.com/shyamexe/scrollable_tab_view/commits?author=shyamexe" title="Code">💻</a> <a href="https://github.com/shyamexe/scrollable_tab_view/commits?author=shyamexe" title="Documentation">📖</a> <a href="#projectManagement-shyamexe" title="Project Management">📆</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sukekyo000"><img src="https://avatars.githubusercontent.com/u/100392635?v=4?s=100" width="100px;" alt="k-kawasaki"/><br /><sub><b>k-kawasaki</b></sub></a><br /><a href="https://github.com/shyamexe/scrollable_tab_view/commits?author=sukekyo000" title="Code">💻</a></td>
     </tr>
   </tbody>
