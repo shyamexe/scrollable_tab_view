@@ -50,6 +50,7 @@ class ScrollableTabBar extends StatelessWidget {
   final ScrollPhysics? physics;
   final InteractiveInkFeatureFactory? splashFactory;
   final BorderRadius? splashBorderRadius;
+  final TabAlignment? tabAlignment;
   const ScrollableTabBar({
     Key? key,
     required this.tabs,
@@ -75,6 +76,7 @@ class ScrollableTabBar extends StatelessWidget {
     this.physics,
     this.splashFactory,
     this.splashBorderRadius,
+    this.tabAlignment,
   }) : super(key: key);
 
   @override
@@ -104,6 +106,7 @@ class ScrollableTabBar extends StatelessWidget {
       splashFactory: splashFactory,
       unselectedLabelColor: unselectedLabelColor,
       unselectedLabelStyle: unselectedLabelStyle,
+      tabAlignment: tabAlignment,
     );
   }
 }
