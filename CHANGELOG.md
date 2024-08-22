@@ -1,10 +1,14 @@
-# Version 1.0.6 - Added TabBar Alignment
+# Version 1.0.7 - Added tabAlignment
 
 ## New Feature
 
-Added the ability to customize the Alignment of the tab bar and tab view independently, providing greater flexibility in UI customization.
+added tabAlignment for TabBar
 
 ## Previous Versions
+
+**Added TabBar Alignment (Version 1.0.6)**
+
+* Added the ability to customize the Alignment of the tab bar and tab view independently, providing greater flexibility in UI customization.
 
 **Custom Tab Background Colors (Version 1.0.5)**
 
