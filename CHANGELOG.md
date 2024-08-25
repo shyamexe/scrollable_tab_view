@@ -1,4 +1,4 @@
-# Version 1.0.9 - Added tabAlignment
+# Version 1.0.10 - Added tabAlignment
 
 ## New Feature
 
