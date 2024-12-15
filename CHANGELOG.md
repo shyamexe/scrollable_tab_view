@@ -6,7 +6,7 @@
 
 - **TabAlignment Parameter**: This feature provides greater customisation by enabling horizontal alignment of tabs, including options like `TabAlignment.start`, `TabAlignment.startOffset`, and more, enhancing user interface flexibility.
 
-- FIX #17
+- FIX [#17](https://github.com/shyamexe/scrollable_tab_view/issues/17)
 
 **Added TabBar Alignment (Version 1.0.6)**
 
