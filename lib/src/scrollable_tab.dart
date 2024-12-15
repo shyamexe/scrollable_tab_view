@@ -218,10 +218,24 @@ class ScrollableTab extends StatefulWidget {
   /// Determines how the tabs are aligned horizontally.
   final AlignmentGeometry tabAlignment;
 
+  /// Specifies the horizontal alignment of the tabs within a [TabBar].
+  ///
+  ///If [TabBar.isScrollable] is false, only [TabAlignment.fill] and [TabAlignment.center] are supported. Otherwise an exception is thrown.
+  ///
+  ///If [TabBar.isScrollable] is true, only [TabAlignment.start], [TabAlignment.startOffset], and [TabAlignment.center] are supported. Otherwise an exception is thrown.
+  ///
+  ///If this is null, then the value of [TabBarTheme.tabAlignment] is used.
+  ///
+//If [TabBarTheme.tabAlignment] is null and [ThemeData.useMaterial3] is true, then [TabAlignment.startOffset] is used if [isScrollable] is true, otherwise [TabAlignment.fill] is used.
+  ///
+  ///If [TabBarTheme.tabAlignment] is null and [ThemeData.useMaterial3] is false, then [TabAlignment.center] is used if [isScrollable] is true, otherwise [TabAlignment.fill] is used.
+  final TabAlignment? tabBarAlignment;
+
   const ScrollableTab({
     Key? key,
     this.useMaxWidth = true,
     this.tabAlignment = Alignment.centerLeft,
+    this.tabBarAlignment,
     this.initialIndex = 0,
     this.animationDuration,
     this.isScrollable = false,
@@ -281,6 +295,8 @@ class _ScrollableTabState extends State<ScrollableTab> {
               child: Align(
                 alignment: widget.tabAlignment,
                 child: TabBar(
+                  tabAlignment: widget
+                      .tabBarAlignment, // Specifies the horizontal alignment of the tabs within a [TabBar].
                   tabs: widget.tabs, // Provide the list of widgets as tabs.
                   isScrollable: widget
                       .isScrollable, // Allow scrolling if isScrollable is true.
