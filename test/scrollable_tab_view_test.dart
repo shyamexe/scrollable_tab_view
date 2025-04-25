@@ -38,7 +38,7 @@ void main() {
 
 // Testing group for ScrollableTabViewWithController widget
   group('ScrollableTabViewWithController widget testing', () {
-     // Test case for initial state
+    // Test case for initial state
     testWidgets(
       'initial state tests',
       (WidgetTester tester) async {
