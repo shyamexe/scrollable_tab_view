@@ -6,7 +6,10 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 This Flutter package provides a vertical scrollable tab bar widget that allows you to display resizable tabs
-
+ 
+ 
+ [Live Demo](https://shyamexe.github.io/scrollable_tab_view/)
+ 
 ### Demo
 
 
