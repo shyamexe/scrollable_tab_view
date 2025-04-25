@@ -1,4 +1,4 @@
-# Version 1.0.12 - Added tabAlignment
+# Version 1.0.14 - add namespace in build.gradle
 
 ## New Feature
 
