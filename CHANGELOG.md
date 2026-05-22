@@ -1,3 +1,17 @@
+# Version 1.0.15 - migrate Android plugin to built-in Kotlin
+
+## Android
+
+- Removes `apply plugin: 'kotlin-android'` from `android/build.gradle` — Flutter 3.44+ automatically applies KGP for plugins that don't declare it, so no explicit application is needed.
+- Removes `buildscript` block (inline AGP/KGP classpath dependencies no longer needed).
+- Removes `allprojects` block.
+- Removes `kotlinOptions { jvmTarget }` block.
+- Removes `sourceSets { main.java.srcDirs += 'src/main/kotlin' }` (handled by KGP automatically).
+- Updates `compileSdkVersion` 31 → 36 to satisfy modern AndroidX dependency requirements.
+- Updates Java compile target from 1.8 to 17.
+- Updates minimum supported SDK version to Flutter 3.44 / Dart 3.12.
+- Fixes Flutter build warning: _"Your app uses plugins that apply Kotlin Gradle Plugin"_.
+
 # Version 1.0.14 - add namespace in build.gradle
 
 ## New Feature
