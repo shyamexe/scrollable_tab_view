@@ -1,3 +1,23 @@
+# Version 1.0.16 - lower SDK requirement, add Swift Package Manager support
+
+> **No breaking changes.** This release *widens* compatibility and is a drop-in upgrade from 1.0.15.
+
+## SDK constraints
+
+- Lowers the required SDK from Dart `^3.12.0` / Flutter `>=3.44.0` back to Dart `^3.11.0` / Flutter `>=3.35.0`, restoring compatibility for projects on slightly older stable toolchains (reverts the bump introduced in 1.0.15).
+- Updates the example app SDK constraint to match (`>=3.11.0 <4.0.0`).
+
+## iOS / macOS
+
+- Adds **Swift Package Manager** support for the iOS and macOS plugins (new `Package.swift` manifests). CocoaPods remains fully supported.
+- Moves the native Swift sources into the SPM layout (`<platform>/scrollable_tab_view/Sources/scrollable_tab_view/`) and updates the podspecs accordingly — no API change.
+
+## Maintenance
+
+- Applies `dart format` across the package.
+- Bumps the Flutter version used in the GitHub Pages workflow to `3.35.0`.
+- Achieves the full **160/160** pub.dev package score.
+
 # Version 1.0.15 - migrate Android plugin to built-in Kotlin
 
 ## Android

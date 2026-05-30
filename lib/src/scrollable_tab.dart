@@ -226,7 +226,7 @@ class ScrollableTab extends StatefulWidget {
   ///
   ///If this is null, then the value of [TabBarTheme.tabAlignment] is used.
   ///
-//If [TabBarTheme.tabAlignment] is null and [ThemeData.useMaterial3] is true, then [TabAlignment.startOffset] is used if [isScrollable] is true, otherwise [TabAlignment.fill] is used.
+  //If [TabBarTheme.tabAlignment] is null and [ThemeData.useMaterial3] is true, then [TabAlignment.startOffset] is used if [isScrollable] is true, otherwise [TabAlignment.fill] is used.
   ///
   ///If [TabBarTheme.tabAlignment] is null and [ThemeData.useMaterial3] is false, then [TabAlignment.center] is used if [isScrollable] is true, otherwise [TabAlignment.fill] is used.
   final TabAlignment? tabBarAlignment;
@@ -303,29 +303,34 @@ class _ScrollableTabState extends State<ScrollableTab> {
 
                   onTap: (value) {
                     widget.onTap?.call(
-                        value); // Call the provided Function(int)? onTap function.
+                      value,
+                    ); // Call the provided Function(int)? onTap function.
                     selectedIndex =
                         value; // Update the selectedIndex with the tapped tab index.
                     setState(
-                        () {}); // Trigger a rebuild to reflect the new selectedIndex.
+                      () {},
+                    ); // Trigger a rebuild to reflect the new selectedIndex.
                   },
                   automaticIndicatorColorAdjustment:
                       widget.automaticIndicatorColorAdjustment ??
-                          true, // Adjust indicator color automatically.
+                      true, // Adjust indicator color automatically.
                   dividerColor:
                       widget.dividerColor, // Color of dividers between tabs.
-                  dragStartBehavior: widget.dragStartBehavior ??
+                  dragStartBehavior:
+                      widget.dragStartBehavior ??
                       DragStartBehavior.start, // Behavior of dragging gestures.
                   enableFeedback:
                       widget.enableFeedback, // Enable haptic feedback.
                   indicator: widget.indicator, // Custom indicator widget.
                   indicatorColor: widget
                       .indicatorColor, // Color of the selected tab indicator.
-                  indicatorPadding: widget.indicatorPadding ??
+                  indicatorPadding:
+                      widget.indicatorPadding ??
                       EdgeInsets.zero, // Padding around the indicator.
                   indicatorSize: widget
                       .indicatorSize, // Size of the selected tab indicator.
-                  indicatorWeight: widget.indicatorWeight ??
+                  indicatorWeight:
+                      widget.indicatorWeight ??
                       2, // Thickness of the selected tab indicator.
                   labelColor:
                       widget.labelColor, // Color of the selected tab label.
@@ -360,7 +365,7 @@ class _ScrollableTabState extends State<ScrollableTab> {
                 children: widget
                     .children, // Pass the list of child widgets to the ScrollableTabView.
               ),
-            )
+            ),
           ],
         ),
       ),

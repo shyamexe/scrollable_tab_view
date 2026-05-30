@@ -34,16 +34,12 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Scrollable Tab View'),
-        ),
+        appBar: AppBar(title: const Text('Scrollable Tab View')),
         body: SingleChildScrollView(
           child: Column(
             children: [
               // TitleWidget widget that displays a centered title
-              const TitleWidget(
-                title: 'ScrollableTab widget',
-              ),
+              const TitleWidget(title: 'ScrollableTab widget'),
               // ScrollableTab widget that displays horizontal tabs and their content
               ScrollableTab(
                 labelColor: Colors.black,
@@ -52,56 +48,46 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                     print('index $value');
                   }
                 },
-                tabs: List.generate(
-                    5,
-                    (index) => Tab(
-                          text: 'index $index',
-                        )),
+                tabs: List.generate(5, (index) => Tab(text: 'index $index')),
                 children: List.generate(
-                    5,
-                    (index) => ListTile(
-                          title: Center(
-                            child: Text(
-                              'tab Number $index',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelLarge!
-                                  .copyWith(fontSize: 20.0 + (30 * index)),
-                            ),
-                          ),
-                        )),
+                  5,
+                  (index) => ListTile(
+                    title: Center(
+                      child: Text(
+                        'tab Number $index',
+                        style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                          fontSize: 20.0 + (30 * index),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               // TitleWidget widget that displays a centered title
-              const TitleWidget(
-                title: 'ScrollableTabBar',
-              ),
+              const TitleWidget(title: 'ScrollableTabBar'),
               // ScrollableTabBar widget that displays the tabs only without the content
               ScrollableTabBar(
                 labelColor: Colors.black,
                 controller: controller,
-                tabs: List.generate(
-                    5,
-                    (index) => Tab(
-                          text: 'index $index',
-                        )),
+                tabs: List.generate(5, (index) => Tab(text: 'index $index')),
               ),
               // ScrollableTabViewWithController widget that displays the tab content with a shared TabController
               ScrollableTabViewWithController(
                 controller: controller,
                 children: List.generate(
-                    5,
-                    (index) => ListTile(
-                          title: Center(
-                            child: Text(
-                              'tab Number $index',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelLarge!
-                                  .copyWith(fontSize: 20.0 + (30 * index)),
-                            ),
-                          ),
-                        )),
-              )
+                  5,
+                  (index) => ListTile(
+                    title: Center(
+                      child: Text(
+                        'tab Number $index',
+                        style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                          fontSize: 20.0 + (30 * index),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -113,20 +99,14 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
 // TitleWidget widget that displays a centered title
 class TitleWidget extends StatelessWidget {
   final String title;
-  const TitleWidget({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
+  const TitleWidget({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
+        child: Text(title, style: Theme.of(context).textTheme.headlineMedium),
       ),
     );
   }

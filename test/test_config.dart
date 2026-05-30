@@ -9,21 +9,16 @@ class ScrollableTabWidget extends StatelessWidget {
     return Scaffold(
       body: ScrollableTab(
         labelColor: Colors.black,
-        tabs: List.generate(
-            5,
-            (index) => Tab(
-                  text: 'index $index',
-                )),
+        tabs: List.generate(5, (index) => Tab(text: 'index $index')),
         children: List.generate(
           5,
           (index) => ListTile(
             title: Center(
               child: Text(
                 'tab Number $index',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge!
-                    .copyWith(fontSize: 20.0 + (30 * index)),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelLarge!.copyWith(fontSize: 20.0 + (30 * index)),
               ),
             ),
           ),
@@ -60,36 +55,33 @@ class _ScrollableTabViewWithControllerWidgetState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        // ScrollableTabBar widget that displays the tabs
-        ScrollableTabBar(
-          labelColor: Colors.black,
-          controller: controller,
-          tabs: List.generate(
-              5,
-              (index) => Tab(
-                    text: 'index $index',
-                  )),
-        ),
-        // ScrollableTabViewWithController widget that displays the tab content
-        ScrollableTabViewWithController(
-          controller: controller,
-          children: List.generate(
+      body: Column(
+        children: [
+          // ScrollableTabBar widget that displays the tabs
+          ScrollableTabBar(
+            labelColor: Colors.black,
+            controller: controller,
+            tabs: List.generate(5, (index) => Tab(text: 'index $index')),
+          ),
+          // ScrollableTabViewWithController widget that displays the tab content
+          ScrollableTabViewWithController(
+            controller: controller,
+            children: List.generate(
               5,
               (index) => ListTile(
-                    title: Center(
-                      child: Text(
-                        'tab Number $index',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .copyWith(fontSize: 20.0 + (30 * index)),
-                      ),
+                title: Center(
+                  child: Text(
+                    'tab Number $index',
+                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                      fontSize: 20.0 + (30 * index),
                     ),
-                  )),
-        )
-      ],
-    ));
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

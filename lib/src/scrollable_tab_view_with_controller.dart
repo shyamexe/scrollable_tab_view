@@ -63,9 +63,6 @@ class _ScrollableTabViewWithControllerState
 
   @override
   Widget build(BuildContext context) {
-    return ScrollableTabView(
-      selectedIndex: index,
-      children: widget.children,
-    );
+    return ScrollableTabView(selectedIndex: index, children: widget.children);
   }
 }
