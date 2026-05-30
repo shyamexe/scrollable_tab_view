@@ -1,11 +1,11 @@
 name: scrollable_tab_view
 description: This Flutter package provides a vertical scrollable tab bar widget that allows you to display tabs in a vertical layout.
-version: 1.0.14
+version: 1.0.15
 homepage: https://github.com/shyamexe/scrollable_tab_view
 
 environment:
-  sdk: ">=2.19.5 <4.0.0"
-  flutter: ">=2.5.0"
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
 
 dependencies:
   flutter:
